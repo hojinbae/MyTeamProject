@@ -1,0 +1,38 @@
+body{
+  background-color: white;
+}
+h1{
+  color: wheat;
+  -webkit-text-stroke: 1px black;
+}
+a {
+  background-color: black;
+  color: white;
+}
+
+.sub-nav {
+  display: none;
+}
+
+.nav-item:hover .sub-nav {
+  display: block;
+  position: absolute;
+  background-color: #343a40;
+  border: 1px solid #343a40;
+  z-index: 1;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  padding: .5rem 1rem;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+}

@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head><script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개정면/임피면 안내</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/card_style.css">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .bd-mode-toggle .dropdown-menu .active .bi {
+            display: block !important;
+        }
+
+        section {
+            position:relative;
+            background-image: url("images/4.jpg");
+            background-repeat: no-repeat;
+            background-position: center top;
+        }
+
+        section p {
+            font-size: 14px;
+        }
+
+        .box1 {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: wheat;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 버튼에 마우스를 올렸을 때의 스타일 */
+        .box1:hover {
+            background-color: burlywood;
+            font-weight: bold;
+        }
+
+        .box2 {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: wheat;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 버튼에 마우스를 올렸을 때의 스타일 */
+        .box2:hover {
+            background-color: burlywood;
+            font-weight: bold;
+        }
+
+        .box3 {
+            display: inline-block;
+            padding: 10px 10px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: wheat;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 버튼에 마우스를 올렸을 때의 스타일 */
+        .box3:hover {
+            background-color: burlywood;
+            font-weight: bold;
+        }
+        /* 돌아가기 버튼 */
+        .box4_top {
+            text-align: right;
+        }
+        .box4 {
+            display: inline-block;
+            padding: 5px 5px;
+            font-size: 12px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: darkgray;
+            transition: background-color 0.3s ease;
+        }
+        /* 버튼에 마우스를 올렸을 때의 스타일 */
+        .box4:hover {
+            background-color: gray;
+            font-weight: bold;
+        }
+        .card-text1 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .chaShadow {
+            text-shadow: 2px 2px 2px #fff;
+        }
+    </style>
+    <script>
+        function scrollToPage1() {
+            // JavaScript를 사용하여 스크롤 페이지로 이동
+            var targetElement = document.getElementById('targetSection1');
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+        function scrollToPage2() {
+            // JavaScript를 사용하여 스크롤 페이지로 이동
+            var targetElement = document.getElementById('targetSection2');
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+        function scrollToPage3() {
+            // JavaScript를 사용하여 스크롤 페이지로 이동
+            var targetElement = document.getElementById('targetSection3');
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <script>
+        // JavaScript로 이벤트를 처리하는 부분입니다.
+        document.addEventListener('DOMContentLoaded', function () {
+            // 모든 이미지 요소를 가져옵니다.
+            var imageContainers = document.querySelectorAll('.card');
+
+            // 각 이미지에 대한 이벤트를 등록합니다.
+            imageContainers.forEach(function (container) {
+                var roundedTop = container.querySelector('.roundedTop');
+                var overlayImage = container.querySelector('.overlayImage');
+
+                container.addEventListener('mouseover', function () {
+                    // 오버레이 이미지를 보여주고, 기존 이미지를 숨깁니다.
+                    overlayImage.style.display = 'block';
+                    roundedTop.style.display = 'none';
+                });
+
+                container.addEventListener('mouseout', function () {
+                    // 기존 이미지를 보여주고, 오버레이 이미지를 숨깁니다.
+                    overlayImage.style.display = 'none';
+                    roundedTop.style.display = 'block';
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md bg-dark fixed-top border-bottom">
+        <div class="container">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="#offcanvas" aria-labelledby="#offcanvasLabel">
+                <ul class="navbar-nav flex-grow-1 justify-content-between">
+                    <li class="nav-item"><a class="nav-link" href="test.html"><h2>Trip</h2></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><h2>서울</h2></a>
+                        <ul class = sub-nav>
+                            <li class="nav-item"><a class="nav-link" href="../장준희/nav_goong.html">경복궁</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">광장시장</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">남산</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">롯데월드</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">DDP</a></li>
+                        </ul>
+                    <li class="nav-item"><a class="nav-link" href="#"><h2>강릉</h2></a>
+                        <ul class = sub-nav>
+                            <li class="nav-item"><a class="nav-link" href="../KYB/html/맛집.html">맛집</a></li>
+                        </ul>
+                    <li class="nav-item"><a class="nav-link" href="Gunsan_Main.html"><h2>군산</h2></a>
+                        <ul class = sub-nav>
+                            <li class="nav-item"><a class="nav-link" href="Gunsan_Travel.html">금강권</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Gunsan_Travel_3.html">시간여행테마</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Gunsan_Travel_2.html">고군산군도</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Gunsan_Travel_4.html">개정/임피</a></li>
+                        </ul>
+                    <li class="nav-item"><a class="nav-link" href="#"><h2>부산</h2></a>
+                        <ul class = sub-nav>
+                            <li class="nav-item"><a class="nav-link" href="../부산/부산_해운대.html">해운대</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../부산/감천문화마을.html">감천마을</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../부산/부산_광안리.html">광안리</a></li>
+                        </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="py-5 text-center container">
+        <h1><strong>개정 / 임피</strong></h1><br>
+        <p class="chaShadow">본래 군산은 현재의 옛도심을 '옥구군'으로 불렸으며<br>
+            옥구군과 함께 '임피군'으로 나뉘어져 있었습니다.<br><br>
+            일제강점기 시절에는 임피군을 옥구군으로 불리다<br>
+            독립 후 군산과 옥구로 나누어 불려지다<br>
+            1995년 이후로 군산으로 통합되어 있습니다.
+        </p>
+        <p>
+            <button class="box1" onclick="scrollToPage1()">관광지 안내</button>&nbsp;
+            <button class="box2" onclick="scrollToPage2()">주변 맛집 안내</button>&nbsp;
+            <button class="box3" onclick="scrollToPage3()">주변 숙소 안내</button>
+        </p>
+    </section>
+    <div class="album py-5 bg-body-tertiary">
+        <div id="targetSection1">
+            <h3 align="center"><strong>관광지 안내</strong></h3>
+        </div>
+        <br>
+        <div class="container">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="roundedTop" src="images/japaneseRiceLocker.jpg">
+                        <div class="card-body">
+                            <p class="card-text1">군산 발산리 구 일본인 농장창고</p>
+                            <p class="card-text">1920년대에 군산지역의 대표적인 농장주였던 시마타니 야소야가 귀중품을 보관하기 위해 만든 금고형 건물입니다.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2127/view/305633?">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/17509941?c=17.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14115018.8182152,4295003.5801811,%EA%B5%B0%EC%82%B0%EA%B0%9C%EC%A0%95%EB%A9%B4%EA%B5%AC%EC%9D%BC%EB%B3%B8%EC%9D%B8%EB%86%8D%EC%9E%A5%EC%B0%BD%EA%B3%A0,17509941,PLACE_POI/-/transit?c=17.00,0,0,0,dh">길찾기</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="roundedTop" src="images/balsan5thRocktower.jpg">
+                        <div class="card-body">
+                            <p class="card-text1">발산리 오층석탑</p>
+                            <p class="card-text">고려 전기의 것으로 추정되는 이 석탑은 높이가 6.4m이고, 2층 기단위에 5층의 탑신을 올린 형태였으나 지금은 탑신의 한 층이 없어지고 4층만 남아있습니다.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2322">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/20103572?c=15.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14114910.6823969,4294996.4287623,%EB%B0%9C%EC%82%B0%EB%A6%AC%EC%98%A4%EC%B8%B5%EC%84%9D%ED%83%91,20103572,PLACE_POI/-/transit?c=15.00,0,0,0,dh">길찾기</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="roundedTop" src="images/KumamotoHouse.jpg">
+                        <img class="overlayImage" src="images/LYCHouse.gif">
+                        <div class="card-body">
+                            <p class="card-text1">이영춘 가옥</p>
+                            <p class="card-text">1920년경에 일본인 대지주 구마모토가 지은 별장으로 서구식과 일본식, 한식의 절충양식 건물로 해방 후에는 개정병원 원장이었던 이영춘 박사가 거주하면서 현재의 이름을 갖게 되었습니다. </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2127/view/305632?">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/20103620?c=15.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14110854.8903176,4296626.2208563,%EC%9D%B4%EC%98%81%EC%B6%98%EA%B0%80%EC%98%A5,20103620,PLACE_POI/-/transit?c=15.00,0,0,0,dh">길찾기</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="roundedTop" src="images/ImpiHyanggyo.jpg">
+                        <img class="overlayImage" src="images/ImpiSchool.gif">
+                        <div class="card-body">
+                            <p class="card-text1">임피향교</p>
+                            <p class="card-text">임피향교는 임피면 읍내리에 있는데 조선시대 관리들의 업적을 알리는 비석이 입구에 많이 있습니다.<br>
+                                최근에 보수도 많이하고 단장을 해서 옛 모습이 사라졌다고 하지만 옛날 선비들이 공부하던 모습을 떠올리기에 부족함이 없이 잘 정돈된 향교입니다. </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2314">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/17506708?c=15.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14120667.84502,4298978.7792999,%EC%9E%84%ED%94%BC%ED%96%A5%EA%B5%90,17506708,PLACE_POI/-/transit?c=15.00,0,0,0,dh">길찾기</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="roundedTop" src="images/Impistation.jpg">
+                        <img class="overlayImage" src="images/ImpiHistory.gif">
+                        <div class="card-body">
+                            <p class="card-text1">임피역사</p>
+                            <p class="card-text">일제강점기 전라도 농산물을 군산항을 통하여 일본으로 반출하는 중요 교통로의 역할을 담당한 수탈의 아픈 역사를 지닌 역입니다.<br>
+                                2002년에 등록문화재 제 208호로 지정된 「임피역」은 건축 당시 농촌지역 소규모 간이역사의 전형적 건축형식과 기법을 잘 보여주며, 원형이 비교적 잘 보존되어 있고 현재는 객차전시관·시실리광장·방죽공원을 조성하고 재래식화장실·우물터·오포대 등을 만들어서 이 고장 출신 소설가 채만식의 작품의 이야기와 엮어서 관광객들의 사랑을 받고 있습니다.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://www.gunsan.go.kr/tour/m2318">정보 안내</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/entry/place/20103563?c=15.00,0,0,0,dh">지도</a></button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="https://map.naver.com/p/directions/-/14122452.7115048,4294288.6956991,%EC%9E%84%ED%94%BC%EC%97%AD%EC%82%AC%20%EA%B0%84%EC%9D%B4%EC%97%AD,20103563,PLACE_POI/-/transit?c=15.00,0,0,0,dh">길찾기</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="box4_top">
+                <a href="#">
+                    <button class="box4">위로 돌아가기</button>
+                </a>
+            </div>
+            <br>
+            <hr>
+            <div id="targetSection2">
+                <h3 align="center"><strong>주변 맛집 안내</strong></h3><br>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="box4_top">
+                <a href="#">
+                    <button class="box4">위로 돌아가기</button>
+                </a>
+            </div>
+            <br>
+            <hr>
+            <div id="targetSection3">
+                <h3 align="center"><strong>주변 숙소 안내</strong></h3><br>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-body-secondary">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="box4_top">
+                <a href="#">
+                    <button class="box4">위로 돌아가기</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="text-body-secondary py-5">
+    <div class="container">
+        <p class="float-end mb-1">
+            <a href="#">위로 이동하기</a>
+        </p>
+        <p class="mb-1">전라북도 군산에 관광하시는 분들 환영합니다!<br>
+            군산의 또다른 명소 개정면과 임피면을 안내하는 페이지입니다.<br>
+            또 다른 군산을 관광하고 싶다면 오른쪽에 있는 <b>'위로 이동하기'</b>를 클릭하세요.</p>
+    </div>
+</footer>
+<script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>
